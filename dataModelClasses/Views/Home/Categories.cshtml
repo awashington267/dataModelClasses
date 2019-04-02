@@ -1,0 +1,16 @@
+﻿@model IEnumerable<dataModelClasses.Models.Category>
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+<h2>Browse Categories</h2>
+<p>Select from @Model.Count() categories:</p>
+
+<ul>
+    @foreach (var c in Model)
+    {
+        <li><a href="/Home/Categories/@c.Id/Products">@c.Name</a></li>
+    }
+</ul>
+
